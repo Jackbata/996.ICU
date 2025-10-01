@@ -1,0 +1,36 @@
+// 在app模块的build.gradle中添加以下依赖
+
+dependencies {
+    // 网络库
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    
+    // JSON处理
+    implementation 'com.google.code.gson:gson:2.10.1'
+    
+    // 内存泄漏检测（可选）
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.12'
+    
+    // 崩溃收集（可选，可以替代自定义实现）
+    implementation 'com.bugfender.sdk:android:3.+'
+    
+    // 其他依赖...
+}
+
+// 添加权限
+android {
+    // ... 其他配置
+    
+    defaultConfig {
+        // ... 其他配置
+    }
+}
+
+// 在AndroidManifest.xml中添加权限
+/*
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+*/
